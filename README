@@ -1,0 +1,54 @@
+                        SPACESCAPE II
+ 
+ LICENSE
+ 
+ Spacescape II is a simple 2D game "Shoot 'em up" developped by
+ Timothée Napoli, and using free art mainly found on
+ opengameart.org.
+ You have all rights on its source code provided that you
+ furnish this unmodified README file with all distributions of
+ your forks.
+ 
+ HOW TO PLAY
+ 
+ Simply execute the "SpacescapeII" file.
+ Controls are :
+ escape             - Close the game.
+ F2                 - Restart a game.
+ Directional keys   - Move the player ship.
+ Space              - Shoot.
+ p                  - Pause the game.
+ m                  - Switch the music.
+ 
+ CONFIGURATION
+ 
+ You can change the default game configuration editing the
+ "labengine.cfg" file. It can be found in :
+ Under unix like systems : ~/.config/Spacescape II/
+ Under windows systems   : c:/users/my_name/App Data/Roaming/Spacescape II
+ 
+ For example you can set the "width" and "height" values to your screen
+ resolution and put the "fullscreen" value to 1 to launch the game in
+ fullscreen mode.
+ 
+ ABOUT COMPILATION
+ 
+ The game dependencies are :
+ - Allegro 5 with all optional dependencies (don't foreget libdumb and libpng !).
+   https://wiki.allegro.cc/index.php?title=Install_Allegro5_From_SVN/Linux/Debian
+ - libboost-regex
+ 
+ Once dependencies are installed, do :
+ $ cd build
+ $ cmake ..
+ $ make -j4
+ $ ./SpacescapeII
+ 
+ CONTACT
+ 
+ Contact me at "timothee.napoli at laposte.net"
+ 
+ CREDITS
+ 
+ Not done yet.
+ 

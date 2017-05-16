@@ -1,0 +1,26 @@
+# Try to find allegro 5 ttf addon
+#
+# ALLEGRO5_TTF_FOUND - system has allegro5 ttf
+# ALLEGRO5_TTF_INCLUDE_DIR - the allegro5 ttf include directory
+# ALLEGRO5_TTF_LIBRARIES - Link these to use allegro5 ttf
+#
+
+FIND_PATH(ALLEGRO5_TTF_INCLUDE_DIR allegro5/allegro_ttf.h)
+
+if (NOT DEFINED DEBUG)
+    SET(ALLEGRO5_TTF_NAMES ${ALLEGRO5_TTF_NAMES} allegro_ttf allegro_ttf.dll)
+else ()
+    SET(ALLEGRO5_TTF_NAMES ${ALLEGRO5_TTF_NAMES} allegro_ttf-debug allegro_ttf-debug.dll)
+endif ()
+FIND_LIBRARY(ALLEGRO5_TTF_LIBRARY NAMES ${ALLEGRO5_TTF_NAMES})
+
+# handle the QUIETLY and REQUIRED arguments and set ALLEGRO5_FOUND to TRUE if
+# all listed variables are TRUE
+INCLUDE(FindPackageHandleStandardArgs)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(ALLEGRO5_TTF DEFAULT_MSG ALLEGRO5_TTF_LIBRARY ALLEGRO5_TTF_INCLUDE_DIR)
+
+IF(ALLEGRO5_TTF_FOUND)
+  SET(ALLEGRO5_TTF_LIBRARIES ${ALLEGRO5_TTF_LIBRARY})
+ENDIF(ALLEGRO5_TTF_FOUND)
+
+MARK_AS_ADVANCED(ALLEGRO5_TTF_LIBRARY ALLEGRO5_TTF_INCLUDE_DIR)
